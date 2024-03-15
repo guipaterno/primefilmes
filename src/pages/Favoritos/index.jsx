@@ -3,7 +3,7 @@ import "./favoritos.css";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import { Trash } from "phosphor-react";
+import {Trash} from "phosphor-react";
 
 export const Favoritos = () => {
   const [filmes, setFilmes] = useState([]);
@@ -34,7 +34,8 @@ export const Favoritos = () => {
               <span>{item.title}</span>
               <div>
                 <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
-                <Trash size={22} onClick={() => excluirFilme(item.id)} />
+               
+                <button onClick={() => excluirFilme(item.id)}>Excluir</button>
               </div>
             </li>
           );
